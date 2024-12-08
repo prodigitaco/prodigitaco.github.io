@@ -12,7 +12,8 @@
             background-color: #121212;
             color: #ffffff;
             display: flex;
-            height: 100vh;
+            flex-direction: column;
+            min-height: 100vh;
         }
         h1 {
             font-size: 2em;
@@ -22,32 +23,76 @@
         p {
             font-size: 0.9em;
         }
+        .header {
+            margin: 20px;
+        }
+        .header a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .footer {
+            margin: 20px;
+            margin-top: auto;
+        }
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+        .footer li {
+            margin-bottom: 10px;
+        }
+        .footer a {
+            text-decoration: underline;
+            color: #ffffff;
+        }
+        .content {
+            margin: auto;
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .content div {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .content p {
+            text-align: left;
+        }
+        @media (max-width: 800px) {
+            .content {
+                flex-direction: column;
+            }
+            .footer ul {
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
-    <div style="margin: 20px; position: absolute; top: 0; left: 0;">
-        <h1><a href="/" style="text-decoration: none; color: #ffffff;">ProDigita</a></h1>
+    <div class="header">
+        <h1><a href="/">ProDigita</a></h1>
     </div>
-    <div style="margin: 20px; position: absolute; bottom: 0; right: 0;">
-        <ul style="list-style-type: none; padding: 0; margin: 0; text-align: right;">
-            <!-- <li style="margin-bottom: 10px;">
-            <a href="#home" style="text-decoration: underline; color: #ffffff;">Home</a>
-            </li> -->
-            <li style="margin-bottom: 10px;">
-                <a href="services.html" style="text-decoration: underline; color: #ffffff;">Services</a>
-            </li>
-            <li style="margin-bottom: 10px;">
-                <a href="contact.html" style="text-decoration: underline; color: #ffffff;">Contact Us</a>
-            </li>
-            <!-- <li style="margin-bottom: 10px;">
-                <a href="portal.html" style="text-decoration: underline; color: #ffffff;">Client Portal</a>
-            </li> -->
-        </ul>
-    </div>
-    <div style="margin: auto; max-width: 1000px; width: 100%; display: flex; justify-content: space-between; ">
-        <div style="flex: 1; padding: 10px; display: flex; flex-direction: column; ">
-            <p style="text-align: center;"><a href="mailto:info@prodigita.co" style="text-decoration: underline; color: #ffffff;">Contact</a></p>
+    <div class="content">
+        <div>
+            <p>Contact Us</p>
+            <p>General inquiries:<br />info@prodigita.co</p>
         </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact Us</a>
+            </li>
+        </ul>
     </div>
 </body>
 </html>

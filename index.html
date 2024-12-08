@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,38 +15,115 @@
             display: flex;
             height: 100vh;
         }
+
         h1 {
             font-size: 2em;
             padding: 0;
             margin: 0;
         }
+
         p {
             font-size: 0.9em;
         }
+
+        .title {
+            margin: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .text {
+            margin: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            max-width: 600px;
+        }
+
+        .menu {
+            margin: 20px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+        .menu a {
+            text-decoration: underline;
+            color: #ffffff;
+        }
+
+        @media (max-width: 800px) {
+            .title {
+                position: relative;
+                margin: 10px;
+                width: 100%;
+            }
+
+            .text {
+                position: relative;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .menu {
+                position: relative;
+                padding: 10px;
+                text-align: left;
+                margin: 0;
+                
+            }
+            .menu ul {
+                text-align: left;
+            }
+            .wrapper {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100vw;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <div style="margin: 20px; position: absolute; top: 0; left: 0;">
+    <div class="title">
         <h1>ProDigita</h1>
     </div>
-    <div style="margin: 20px; position: absolute; bottom: 0; left: 0; max-width: 600px;">
-        <p>To act on larger scales, leaders leverage assets, relationships, and people. AI technology increases the power of this leverage. It also creates new kinds of leverage. We help companies access and manage this leverage. </p>
-    </div>
-    <div style="margin: 20px; position: absolute; bottom: 0; right: 0;">
-        <ul style="list-style-type: none; padding: 0; margin: 0; text-align: right;">
-            <!-- <li style="margin-bottom: 10px;">
-            <a href="#home" style="text-decoration: underline; color: #ffffff;">Home</a>
+    <div class="wrapper">
+        <div class="menu">
+            <ul>
+                <!-- <li>
+            <a href="#home">Home</a>
             </li> -->
-            <li style="margin-bottom: 10px;">
-                <a href="services.html" style="text-decoration: underline; color: #ffffff;">Services</a>
-            </li>
-            <li style="margin-bottom: 10px;">
-                <a href="contact.html" style="text-decoration: underline; color: #ffffff;">Contact Us</a>
-            </li>
-            <!-- <li style="margin-bottom: 10px;">
-                <a href="portal.html" style="text-decoration: underline; color: #ffffff;">Client Portal</a>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+                <!-- <li>
+                <a href="portal.html">Client Portal</a>
             </li> -->
-        </ul>
+            </ul>
+        </div>
+        <div class="text">
+            <p>To act on larger scales, leaders leverage assets, relationships, and people. AI technology increases the
+                power of this leverage. It also creates new kinds of leverage. We help companies access and manage this
+                leverage. </p>
+        </div>
     </div>
 </body>
+
 </html>
